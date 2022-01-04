@@ -9,6 +9,7 @@ import { productos } from './utilities/products'
 
 export const ShoppingApp = () => {
 
+
     const [cartState, setCartState] = useState(false)
     const [aside, setAside] = useState(false)
 
@@ -74,7 +75,7 @@ export const ShoppingApp = () => {
                     aside={aside}
                     setAside={setAside} />
 
-                <div className='px-4 mt-16 grid grid-cols-2 gap-4 bg-white'>
+                <div className='px-4 mt-14 py-6 grid grid-cols-2 gap-4 bg-white dark:bg-stone-900'>
                     {
                         products.map(product => (
                             <ProductItem key={product.id} data={product} addToCart={addToCart} />

@@ -6,11 +6,11 @@ export const Cart = ({ data, cartState, setCartState, clearCart, removeFromCart,
     const [menuCart, setMenuCart] = useState(false)
 
     return (
-        <div className={`fixed top-0 bottom-0 ${cartState ? 'right-0' : '-right-full'} transition-all duration-500 ease-out w-screen bg-white`}>
-            <div className='h-12 flex items-center border-b'>
+        <div className={`fixed h-screen top-0 ${cartState ? 'right-0' : '-right-full'} transition-all duration-500 ease-out w-screen bg-white dark:bg-stone-900 dark:text-white`}>
+            <div className='h-16 flex items-center border-b'>
                 <button
                     onClick={() => setCartState(false)}
-                    className='text-3xl py-2 px-3'>
+                    className='text-4xl py-4 px-4'>
                     <i className="fas fa-angle-left"></i>
                 </button>
                 <span className='ml-2 text-2xl font-bold'>Cart</span>
@@ -31,19 +31,19 @@ export const Cart = ({ data, cartState, setCartState, clearCart, removeFromCart,
                     </div>
             }
 
-            <div className={`${!menuCart && 'hidden'} absolute top-26 right-6 bg-gray-200 w-52 h-auto rounded-md`}>
-                <button 
+            <div className={`${!menuCart && 'hidden'} absolute top-26 right-6 bg-gray-200 border dark:bg-stone-900 dark:text-white w-52 h-auto rounded-md`}>
+                <li 
                 onClick={() => {
                     clearCart()
                     setMenuCart(false)
                 }}
-                className='w-full text-left px-4 py-2 capitalize font-normal'>Vaciar carrito</button>
-                {/* <button className='w-full text-left px-4 py-2 capitalize font-normal '>Enviar orden</button> */}
+                className='list-none w-full text-left px-4 py-2 capitalize font-normal border-gray-400 border-b'>Vaciar carrito</li>
+                <li className='list-none w-full text-left px-4 py-2 capitalize font-normal '>Enviar orden</li>
             </div>
 
 
 
-            <div className='h-full overflow-y-auto'>
+            <div className='h-4/5 overflow-y-auto'>
                 <div className='flex flex-col justify-center items-center'>
                     {
                         data.map(({ id, name, price, image, quantity }) => (
