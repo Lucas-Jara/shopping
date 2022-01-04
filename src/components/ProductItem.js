@@ -10,7 +10,7 @@ export const ProductItem = ({ data, addToCart }) => {
                 <div className=''>
                     <img
                         className='w-32 aspect-square content-center object-cover rounded-md'
-                        src={`./img/${image}.jpeg`} alt={name} />
+                        src={`./img/${image}`} alt={name} />
                 </div>
                 <h2 className='text-lg font-medium leading-8 capitalize text-center text-ellipsis'>{name}</h2>
                 <p className='text-sm font-medium text'>{price}$</p>

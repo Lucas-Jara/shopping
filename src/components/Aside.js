@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Aside = ({ aside, setAside, theme, setTheme }) => {
+export const Aside = ({ aside, setAside }) => {
     return (
         <div className={`fixed h-screen top-0 ${aside ? 'right-0' : '-right-full'} transition-all duration-500 ease-out w-screen bg-white dark:bg-stone-900 dark:text-white`}>
             <div className='h-16 flex items-center border-b'>
