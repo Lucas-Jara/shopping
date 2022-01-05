@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 
 export const Cart = ({ data, cartState, setCartState, clearCart, removeFromCart, incrementQuantity, decrementQuantity }) => {
 
+    console.log(data);
+
     const total = data.reduce((sum, product) => sum + parseInt(product.price * product.quantity), 0)
     const [menuCart, setMenuCart] = useState(false)
 
