@@ -52,7 +52,7 @@ export const Cart = ({ data, cartState, setCartState, clearCart, removeFromCart,
                             <div key={id}
                                 className='w-full flex justify-between items-stretch p-4 overflow-y-scroll border-b'>
                                 <div className='w-full flex items-center'>
-                                    <img className='w-28 aspect-square rounded' src={`./img/${image}.jpeg`} alt={name} />
+                                    <img className='w-28 aspect-square rounded' src={`./img/${image}`} alt={name} />
                                     <div className='px-3'>
                                         <h2 className='font-medium text-lg leading-5'>{name}</h2>
                                         <p className='font-normal text-base py-3'>{price}$</p>
